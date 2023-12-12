@@ -1,0 +1,384 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* 
+:root {
+    --primary-color: #ffff ;
+    --secondary-color: #E50914;
+}
+
+h1 {
+    font-size: 42px;
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 400;
+    font-size: var(--primary-font);
+    color: var(--primary-color);
+} */
+
+button {
+    color: white;
+    background-color: #E50914;
+    font-family: var(--primary-font);
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    height: fit-content;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #7b050b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #000;
+    color: white;
+}
+
+
+/* Header */
+header {
+    width: 100%;
+    height: 100vh;
+    background-image:  linear-gradient(to top, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(image/banner.jpg);
+    padding: 10px 12%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}   
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+    cursor: pointer;
+}
+
+nav .right-items {
+    align-items: center;
+}
+
+nav select, select {
+    color: var(--primary-color);
+    background-color: transparent;
+    font-family: var(--primary-font);
+    padding: 12px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: none;
+    height: fit-content;
+    cursor: pointer;
+    outline: none;
+}
+
+nav select option {
+    background-color: transparent !important;
+    color: #E50914;
+}
+
+nav button {
+    margin-left: 10px;
+}
+
+
+/* header content */
+header .header-content {
+    text-align: center;
+}
+
+header .header-content h1{
+    font-size: 50px;
+    margin-top: 15%;
+    font-weight: 700 !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+header .header-content p {
+    font-size: 25px;
+    font-weight: 200;
+    padding: 10px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header .header-content form {
+    margin-top: 2%;
+}
+
+header .header-content input, .email-input {
+    padding: 15px 150px 15px 20px;
+    background-color: rgba(0, 0, 0, 0.451);
+    box-shadow: none;
+    border: 1px solid rgb(173, 171, 171);
+    color: white;
+    border-radius: 5px;
+    margin-right: 1%;
+    
+}
+
+header .header-content input::placeholder{
+    color: gray;
+    font-size: 16x;
+    text-align: left;
+    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+}
+header .header-content form button, button {
+    padding: 15px 60px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+
+/* feature */
+.feature {
+    padding: 10px 12%;
+    font-style: 22px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    border-top: 5px solid #333;
+}
+
+.text-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.text-col h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.text-col p {
+    font-size: 20px; 
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.img-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+
+/* FAQs */
+.faqs {
+    padding: 50px 12%;
+    text-align: center;
+    font-size: 18px;
+    border-top: 5px solid #333;
+}
+
+.faqs h1{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li {
+    list-style-type: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: 0.3s ease all;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .conent {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease all;
+}
+
+.accordion input[type="radio"]:checked + label + .conent{
+    max-height: 600px;
+    padding: 30px 20px;
+
+} 
+
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+.accordion form {
+    margin-top: 2%;
+}
+.accordion form .email-input{
+    padding: 15px 150px 15px 20px;
+    background-color: rgba(0, 0, 0, 0.451);
+    box-shadow: none;
+    border: 1px solid rgb(173, 171, 171);
+    color: white;
+    border-radius: 5px;
+    margin-right: 1%;
+}
+
+
+/* FOOTER */
+
+.footer {
+    padding: 50px 15% 10px;
+    border: 6px solid #333;
+    margin-top: 3%;
+    color: #777;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer .row {
+    align-items: flex-start;
+    padding: 10px 0;
+    border: none;
+}
+
+
+
+@media only screen and (max-width:600px) {
+    
+    nav img {
+        width: 100px !important;
+    }
+
+    nav .right-items {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav select {
+        padding: 5px 10px;
+    }
+
+    nav button {
+        padding: 5px 8px;
+    }
+
+    header .header-content {
+        padding-top: 50px;
+    }
+    header .header-content h1 {
+        font-size: 30px !important;
+    }
+
+    header .header-content h3 {
+        padding-top: 10px;
+    }
+    header .header-content p {
+        font-size: 14px;
+    }
+
+    .header-content form input {
+        padding: 10px 20px !important;
+    }
+
+    .header-content form button {
+        padding: 5px 10px;
+    }
+
+
+    .text-col, .img-col {
+        flex-basis: 100%;
+        margin-top: 5%;
+    }
+
+    .feature h1 {
+        font-size: 30px;
+    }
+
+    .row:nth-child(2), .row:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .feature .row {
+        padding: 10px 0;
+    } 
+
+    .faqs form input {
+        margin-top: 2%;
+        padding: 5px 20px;
+    }
+    .faqs form button {
+        padding: 5px 20px;
+        margin-top: 2%;
+    }
+}
